@@ -29,12 +29,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.calculator {
   background-color: var(--color1);
   padding: 10px;
   border-radius: 10px;
   color: var(--white);
-  margin: auto;
   font-size: var(--font-size);
+  position: relative;
   overflow: hidden;
 }
 .header {
@@ -146,12 +148,9 @@ body {
   color: var(--color1);
 }
 .warning {
-  position: absolute;
-  left: 50%;
-  top: 75%;
-  transform: translateX(-50%);
   color: var(--white);
   font-size: 20px;
-  max-width: 400px;
   text-align: center;
+  min-height: 50px;
+  margin-top: 10px;
 }

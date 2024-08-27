@@ -7,15 +7,16 @@ let decimal = document.getElementById("decimal");
 let displayHistory = document.querySelector(".header i");
 let history = document.querySelector(".history");
 let back = document.querySelector(".history i");
-let container = document.querySelector(".container");
 let warning = document.querySelector(".warning");
 let empty = document.querySelector(".history .empty");
 function append(input) {
   screen.value += input;
 }
+let timer;
 function warnings(value) {
+  clearTimeout(timer);
   warning.textContent = value;
-  setTimeout(() => {
+  timer = setTimeout(() => {
     warning.textContent = "";
   }, 3000);
 }
@@ -33,8 +34,10 @@ buttons.forEach((button) => {
         e.preventDefault();
         if (screen.value === "") {
           warnings("You can't start with an operator");
+        } else if (screen.value.endsWith(".")) {
+          warnings("You can't add operators after a decimal point");
         } else {
-          warnings("You can't add operators after this value");
+          warnings("You can't add two consecutive operators");
         }
       } else {
         append(button.textContent);
@@ -53,8 +56,7 @@ buttons.forEach((button) => {
         e.preventDefault();
         if (screen.value.endsWith(".")) {
           warnings("You can't add two consecutive decimal points");
-        }
-        if (check[check.length - 1].indexOf(".") !== -1) {
+        } else {
           warnings("You can't add two decimal points in one number");
         }
       } else {
