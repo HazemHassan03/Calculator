@@ -94,6 +94,9 @@ equal.addEventListener("click", (e) => {
   if (check.indexOf(",") === -1) {
     e.preventDefault();
     warnings("Add mathematical operation first");
+  } else if (isNaN(parseInt(screen.value[screen.value.length - 1]))) {
+    e.preventDefault();
+    warnings("Mathematical operation can't end with an operator");
   } else {
     if (screen.value === "") {
       screen.value = "";
