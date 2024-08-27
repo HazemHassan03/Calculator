@@ -16,7 +16,7 @@ body {
 }
 .copyright {
   display: block;
-  width: fit-content;
+  width: 200px;
   margin: auto;
 }
 .copyright img {
