@@ -9,44 +9,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
-      <div class="calculator">
-        <input id="screen" readonly />
-        <div class="calculations">
-          <button class="op">+</button>
-          <button class="op">-</button>
-          <button class="op">×</button>
-          <button class="op">÷</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button id="delete"><i class="fa-solid fa-delete-left"></i></button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button id="equal">=</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button>0</button>
-          <button id="decimal">.</button>
-          <button id="clear">C</button>
-        </div>
+      <div class="header">
+        <i class="fa-solid fa-bars"></i>
+        <a
+          class="copyright"
+          href="https://www.linkedin.com/in/hazemhassan03/"
+          target="_blank"
+          ><img
+            src="https://i.ibb.co/8zTNnBQ/Copyright-white.png"
+            alt="My Logo"
+        /></a>
       </div>
-      <a
-        class="copyright"
-        href="https://www.linkedin.com/in/hazemhassan03/"
-        target="_blank"
-        ><img
-          src="https://i.ibb.co/2ZCCRcb/Copyright.png"
-          alt="My Logo"
-      /></a>
+      <input id="screen" readonly />
+      <div class="calculations">
+        <button class="op">+</button>
+        <button class="op">-</button>
+        <button class="op">×</button>
+        <button class="op">÷</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button id="delete"><i class="fa-solid fa-delete-left"></i></button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button id="equal">=</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>0</button>
+        <button id="decimal">.</button>
+        <button id="clear">C</button>
+      </div>
+      <div class="history">
+        <h2>History</h2>
+        <i class="fa-solid fa-arrow-left"></i>
+        <p class="empty">Empty</p>
+      </div>
     </div>
+    <p class="warning"></p>
     <script src="JS/main.js"></script>
     <script
       src="https://kit.fontawesome.com/0f482dae47.js"
