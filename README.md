@@ -1,4 +1,4 @@
-# CodeAlpha_Calculator
+# Calculator
 This is a calculator designed and developed using HTML, CSS, and JavaScript. 
 
 The calculator includes several features:
